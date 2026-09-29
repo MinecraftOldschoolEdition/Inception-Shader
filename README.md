@@ -1,7 +1,7 @@
 # Inception
 
-An original upward world-curvature shader inspired by the supplied classic Minecraft
-video stills. Terrain, water, entities, block entities, particles, selection outlines,
+An original upward world-curvature shader inspired by old retro Minecraft
+videos showcasing Inception GLSL shaders. Terrain, water, entities, block entities, particles, selection outlines,
 rain, snow, lightning and clouds share one camera-relative world-space bend. The sky,
 first-person hand and HUD remain steady. This is a visual effect: collisions and
 block interaction still use the original world.
