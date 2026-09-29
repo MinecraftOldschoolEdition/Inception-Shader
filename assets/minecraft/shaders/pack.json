@@ -1,0 +1,76 @@
+{
+  "format": 3,
+  "id": "oldschool:inception",
+  "name": "Inception",
+  "deforms_world": true,
+  "categories": [
+    {
+      "id": "curvature",
+      "label": "World Curvature",
+      "options": [
+        {
+          "id": "enabled",
+          "label": "World Bend",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "id": "radius",
+          "label": "Bend Radius",
+          "description": "Smaller values curl the world upward more strongly. Measured in blocks.",
+          "type": "number",
+          "default": 48,
+          "min": 16,
+          "max": 512,
+          "step": 8,
+          "control": "slider"
+        },
+        {
+          "id": "start",
+          "label": "Flat Distance",
+          "description": "Keep the nearby world flat before the bend begins, in blocks.",
+          "type": "number",
+          "default": 8,
+          "min": 0,
+          "max": 32,
+          "step": 2,
+          "control": "slider"
+        },
+        {
+          "id": "shape",
+          "label": "Bend Shape",
+          "type": "enum",
+          "default": "All Directions",
+          "values": [
+            "All Directions",
+            "East / West",
+            "North / South"
+          ]
+        },
+        {
+          "id": "direction",
+          "label": "Bend Direction",
+          "type": "enum",
+          "default": "Upward",
+          "values": [
+            "Upward",
+            "Downward"
+          ]
+        }
+      ]
+    }
+  ],
+  "programs": {
+    "minecraft_color.vert": "world.vert",
+    "minecraft_compact_terrain.vert": "world.vert",
+    "minecraft_lit_color.vert": "world.vert",
+    "minecraft_weather_cloud.vert": "world.vert",
+    "minecraft_lightning.vert": "world.vert",
+    "minecraft_weather.vert": "weather.vert",
+    "minecraft_color.frag": "cloud_fade.frag",
+    "minecraft_base_world.frag": "cloud_fade.frag",
+    "minecraft_non_world.frag": "cloud_fade.frag"
+  },
+  "lighting_mode": "rasterized",
+  "engine_defaults": {}
+}
